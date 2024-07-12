@@ -4,7 +4,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 document.getElementById('searchForm').addEventListener("submit", function(event) {
     event.preventDefault();
-    const query = document.getElementById('searchInput').trim().value;
+    const query = document.getElementById('searchInput').value.trim();
 
 if (query === ""){
     iziToast.error({
@@ -14,7 +14,7 @@ if (query === ""){
     return;
 }
 fetchImages(query) 
-   then(data => {
+   .then(data => {
     if(data.hits.length > 0){
        return data.hits;
     }

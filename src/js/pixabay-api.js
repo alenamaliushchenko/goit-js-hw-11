@@ -3,7 +3,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 export async function fetchImages(query){
     const apiKEY = '44883065-b38075931b52680ca8f625c61';
-    const url ='https://pixabay.com/api/?key=${apiKey}&q=${encodeURLComponent(query)}&image_type=photo&orientation=horizontal&safesearch=true';
+    const url ='https://pixabay.com/api/?key=${apiKEY}&q=${encodeURLComponent(query)}&image_type=photo&orientation=horizontal&safesearch=true';
 
 return fetch(url)
     .then(response => {
