@@ -26,6 +26,10 @@ fetchImages(query)
     }
    })
    .catch(error => {
+    console.log('Error:', error);
+        iziToast.error({
+            title: 'Error',
+            message: 'Sorry, there are no images matching your search query. Please try again!',
+        });
    });
-  
-})
+  });
