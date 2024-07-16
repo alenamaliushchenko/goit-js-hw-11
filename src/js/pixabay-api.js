@@ -1,4 +1,4 @@
-
+import iziToast from "izitoast";
 
 export async function fetchImages(query){
     const apiKEY = '44883065-b38075931b52680ca8f625c61';
