@@ -6,26 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Search App</title>
     
-    <link rel="stylesheet" href="path/to/css-loader.css" >
-
+   
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-3fe00192.js">
     <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-4b066c51.css">
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-783e1f2c.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-f914f765.css">
   </head>
   <body>
-      <section>
+    <section>
       <form id="searchForm">
         <input type="text" id="searchInput" name="query" placeholder="Search images..." required>
         <button type="submit">Search</button>
       </form>
       <div id="gallery" class="gallery"></div>
       <div class="loader-container">
-        <div class="loader loader-default"></div>
+        <span class="loader"></span>
         <div class="loading-message">Loading images, please wait...</div>
-    </div>
+      </div>
     </section>
     
-   
   </body>
 </html>
