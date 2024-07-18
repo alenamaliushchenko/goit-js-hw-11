@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Search App</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="path/to/css-loader.css" >
-
+   
   </head>
   <body>
-      <section>
+    <section>
       <form id="searchForm">
         <input type="text" id="searchInput" name="query" placeholder="Search images..." required>
         <button type="submit">Search</button>
       </form>
       <div id="gallery" class="gallery"></div>
       <div class="loader-container">
-        <div class="loader loader-default"></div>
+        <span class="loader"></span>
         <div class="loading-message">Loading images, please wait...</div>
-    </div>
+      </div>
     </section>
     <script type="module" src="./main.js" defer></script>
-   
   </body>
 </html>

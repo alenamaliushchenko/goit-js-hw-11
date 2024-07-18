@@ -2,27 +2,26 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 function createImageCard ({webformatURL, largeImageURL, tags, likes, views, comments, downloads}) {
-    return`
+    return `
         <div class="photo-card">
             <a href="${largeImageURL}">
-            <img src="${webformatURL}" alt="${largeImageURL}"  loading="lazy" />
+                <img src="${webformatURL}" alt="${largeImageURL}"  loading="lazy" />
             </a>
             <div class="info">
                 <p class="info-item">
-                <b>Likes:</b><span class="info-item-value">${likes}</span>
+                    <b>Likes:</b><span class="info-item-value">${likes}</span>
                 </p>
                 <p class="info-item">
-                <b>Views:</b><span class="info-item-value">${views}</span>
+                    <b>Views:</b><span class="info-item-value">${views}</span>
                 </p>
                 <p class="info-item">
-                <b>Comments:</b><span class="info-item-value">${comments}</span>
+                    <b>Comments:</b><span class="info-item-value">${comments}</span>
                 </p>
                 <p class="info-item"> 
-                <b>Downloads:</b><span class="info-item-value">${downloads}</span>
+                    <b>Downloads:</b><span class="info-item-value">${downloads}</span>
                 </p>
             </div>
-        </div>
-    `;
+        </div>`;
 }
 function clearGallery (galleryElement){
     galleryElement.innerHTML = '';
