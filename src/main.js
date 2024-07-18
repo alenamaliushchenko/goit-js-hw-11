@@ -18,23 +18,42 @@ if (query === ""){
     });
     return;
 }
+
+const loaderContainer = document.querySelector('.loader-container');
+const loader = document.querySelector('.loader');
+ const loadingMessage = document.querySelector('.loading-message');
+
+  function showLoader() {
+    loader.classList.add('is-active');
+    loadingMessage.classList.add('is-active');
+    loaderContainer.style.display = 'block';
+  }
+
+  function hideLoader() {
+    loader.classList.remove('is-active');
+    loadingMessage.classList.remove('is-active');
+    loaderContainer.style.display = 'none';
+  }
+
+  showLoader();
 fetchImages(query) 
    .then(data => {
-    if(data.hits.length > 0){
-       renderGallery(gallery, data.hits);
-    }
-    else{
-        iziToast.error({
+        hideLoader();
+        if(data.hits.length > 0){
+            renderGallery(gallery, data.hits);
+        } else{
+            iziToast.error({
             title: 'Error',
             message: 'Sorry, there are no images matching your search query. Please try again!',
-        });
-    }
-   })
+            });
+        }
+    })
    .catch(error => {
-    console.log('Error:', error);
+        console.log('Error:', error);
         iziToast.error({
             title: 'Error',
             message: 'Sorry, there are no images matching your search query. Please try again!',
         });
+        hideLoader();
    });
   });
